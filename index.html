@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myJyotisha — Ancient Vedic Science & Mathematics</title>
+    <title>myJyotish — Your Bhavishya, Future Mapped with the Stars</title>
+    <meta name="description" content="MyJyotish — Your Bhavishya, future mapped with the stars. Vedic Jyotisha rooted in 5,000 years of sacred science. Janam Patri, Nakshatra, Kundli Milan, Graha Shanti and Relationship Healing for the Hindu and Buddhist diaspora worldwide.">
     <style>
         :root {
-            --burgundy-deep: #2A0813;  /* Main Rich Burgundy Background */
-            --burgundy-card: #3D101E;  /* Lighter Burgundy for Cards */
-            --gold-glow: #e5c158;      /* Warm Vedic Gold */
-            --starlight: #f9f9fb;      /* Clean Off-White Text */
-            --muted-rose: #c5a4af;     /* Muted Rose-Gray for Subtitles */
+            --burgundy-deep: #2A0813;
+            --burgundy-card: #3D101E;
+            --gold-glow: #e5c158;
+            --starlight: #f9f9fb;
+            --muted-rose: #c5a4af;
         }
+
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -25,55 +28,69 @@
             overflow-x: hidden;
         }
 
-        /* 100% PURE CSS STAR BACKGROUNDS - RUNS DIRECTLY FROM LOCAL FILES */
-        .stars-layer-1, .stars-layer-2 {
+        /* ── STAR LAYERS ── */
+        .stars-layer-1, .stars-layer-2, .stars-layer-3 {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%; height: 100%;
             pointer-events: none;
         }
 
-        /* Layer 1: Sharp White Stars */
         .stars-layer-1 {
             z-index: 1;
-            background-image: 
-                radial-gradient(1px 1px at 15% 18%, #fff, transparent),
-                radial-gradient(1.5px 1.5px at 45% 35%, #fff, transparent),
-                radial-gradient(1px 1px at 85% 12%, #fff, transparent),
-                radial-gradient(2px 2px at 25% 65%, #fff, transparent),
-                radial-gradient(1px 1px at 75% 80%, #fff, transparent),
-                radial-gradient(1.5px 1.5px at 92% 55%, #fff, transparent),
-                radial-gradient(1px 1px at 5% 75%, #fff, transparent),
-                radial-gradient(2px 2px at 60% 15%, #fff, transparent),
-                radial-gradient(1px 1px at 35% 85%, #fff, transparent),
-                radial-gradient(1.5px 1.5px at 70% 40%, #fff, transparent);
-            background-size: 350px 350px;
+            background-image:
+                radial-gradient(1px 1px at 8% 12%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 22% 38%, #fff, transparent),
+                radial-gradient(1px 1px at 38% 8%, #fff, transparent),
+                radial-gradient(2px 2px at 55% 62%, #fff, transparent),
+                radial-gradient(1px 1px at 72% 28%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 88% 75%, #fff, transparent),
+                radial-gradient(1px 1px at 15% 82%, #fff, transparent),
+                radial-gradient(2px 2px at 48% 18%, #fff, transparent),
+                radial-gradient(1px 1px at 65% 88%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 92% 42%, #fff, transparent),
+                radial-gradient(1px 1px at 33% 55%, #fff, transparent),
+                radial-gradient(2px 2px at 78% 5%, #fff, transparent),
+                radial-gradient(1px 1px at 5% 48%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 42% 72%, #fff, transparent),
+                radial-gradient(1px 1px at 95% 22%, #fff, transparent);
+            background-size: 300px 300px;
             animation: twinkleSlow 4s infinite ease-in-out;
         }
 
-        /* Layer 2: Soft Golden Stars */
         .stars-layer-2 {
             z-index: 2;
-            background-image: 
-                radial-gradient(1.5px 1.5px at 30% 25%, var(--gold-glow), transparent),
-                radial-gradient(1px 1px at 70% 65%, var(--gold-glow), transparent),
-                radial-gradient(2px 2px at 50% 85%, var(--gold-glow), transparent),
-                radial-gradient(1.5px 1.5px at 80% 30%, var(--gold-glow), transparent),
-                radial-gradient(1px 1px at 10% 55%, var(--gold-glow), transparent),
-                radial-gradient(2.5px 2.5px at 90% 85%, var(--gold-glow), transparent);
-            background-size: 450px 450px;
+            background-image:
+                radial-gradient(1.5px 1.5px at 18% 28%, var(--gold-glow), transparent),
+                radial-gradient(1px 1px at 62% 58%, var(--gold-glow), transparent),
+                radial-gradient(2px 2px at 38% 82%, var(--gold-glow), transparent),
+                radial-gradient(1.5px 1.5px at 82% 18%, var(--gold-glow), transparent),
+                radial-gradient(1px 1px at 6% 68%, var(--gold-glow), transparent),
+                radial-gradient(2.5px 2.5px at 92% 88%, var(--gold-glow), transparent),
+                radial-gradient(1.5px 1.5px at 55% 35%, var(--gold-glow), transparent),
+                radial-gradient(1px 1px at 28% 92%, var(--gold-glow), transparent);
+            background-size: 420px 420px;
             animation: twinkleFast 3s infinite ease-in-out;
             animation-delay: 1.5s;
         }
 
-        /* Pure CSS Twinkle Keyframes */
+        .stars-layer-3 {
+            z-index: 2;
+            background-image:
+                radial-gradient(1px 1px at 12% 45%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 58% 22%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 32% 15%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1px 1px at 72% 78%, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 45% 95%, rgba(255,255,255,0.6), transparent);
+            background-size: 550px 550px;
+            animation: twinkleSlow 5s infinite ease-in-out;
+            animation-delay: 2.5s;
+        }
+
         @keyframes twinkleSlow {
             0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.85; }
+            50% { opacity: 0.9; }
         }
 
         @keyframes twinkleFast {
@@ -81,6 +98,7 @@
             50% { opacity: 1; }
         }
 
+        /* ── LAYOUT ── */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -89,7 +107,7 @@
             z-index: 10;
         }
 
-        /* Header & Navigation */
+        /* ── HEADER ── */
         header {
             display: flex;
             justify-content: space-between;
@@ -99,42 +117,78 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: 1px;
             color: var(--starlight);
         }
 
-        .logo span {
+        .logo span { color: var(--gold-glow); }
+
+        .logo-devanagari {
+            font-size: 0.85rem;
             color: var(--gold-glow);
+            opacity: 0.7;
+            display: block;
+            letter-spacing: 2px;
+            margin-top: 2px;
         }
 
-        /* Hero Section */
+        .header-tagline {
+            color: var(--muted-rose);
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-align: right;
+        }
+
+        /* ── HERO ── */
         .hero {
             text-align: center;
             padding: 80px 0 60px 0;
         }
 
+        .om-symbol {
+            font-size: 3.5rem;
+            color: var(--gold-glow);
+            display: block;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(229, 193, 88, 0.4);
+            animation: omPulse 3s infinite ease-in-out;
+        }
+
+        @keyframes omPulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(229,193,88,0.3); }
+            50% { text-shadow: 0 0 40px rgba(229,193,88,0.7); }
+        }
+
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             letter-spacing: -1px;
             font-weight: 800;
             text-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
 
+        .hero-sub {
+            font-size: 1.4rem;
+            color: var(--gold-glow);
+            margin-bottom: 8px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--muted-rose);
             max-width: 800px;
             margin: 0 auto 40px auto;
         }
 
-        /* Badge Callouts */
+        /* ── BADGES ── */
         .badge-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
@@ -145,18 +199,19 @@
             color: var(--gold-glow);
             padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* App Download Buttons */
+        /* ── CTA BUTTONS ── */
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -168,34 +223,88 @@
             text-decoration: none;
             transition: all 0.2s ease;
             box-shadow: 0 4px 15px rgba(229,193,88,0.2);
+            display: inline-block;
         }
 
         .btn:hover {
             opacity: 0.95;
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(229,193,88,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(229,193,88,0.4);
         }
 
         .btn-secondary {
             background-color: transparent;
             color: var(--starlight);
-            border: 2px solid rgba(249, 249, 251, 0.2);
+            border: 2px solid rgba(249, 249, 251, 0.25);
             box-shadow: none;
         }
 
         .btn-secondary:hover {
-            border-color: var(--starlight);
-            background: rgba(249, 249, 251, 0.05);
+            border-color: var(--gold-glow);
+            color: var(--gold-glow);
+            background: rgba(229,193,88,0.05);
             box-shadow: none;
         }
 
-        /* Scientific Manifesto Divider */
+        .cta-note {
+            font-size: 0.85rem;
+            color: var(--muted-rose);
+            margin-bottom: 50px;
+        }
+
+        /* ── SIGNUP SECTION ── */
+        .signup-section {
+            background: linear-gradient(135deg, rgba(229,193,88,0.08), rgba(229,193,88,0.03));
+            border: 1px solid rgba(229,193,88,0.3);
+            border-radius: 12px;
+            padding: 35px 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .signup-section h3 {
+            color: var(--gold-glow);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .signup-section p {
+            color: var(--muted-rose);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .signup-email-display {
+            display: inline-block;
+            background: rgba(229,193,88,0.12);
+            border: 1px solid rgba(229,193,88,0.4);
+            border-radius: 8px;
+            padding: 12px 24px;
+            color: var(--gold-glow);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .signup-instruction {
+            font-size: 0.9rem;
+            color: var(--muted-rose);
+            margin-top: 8px;
+        }
+
+        .signup-instruction strong {
+            color: var(--starlight);
+        }
+
+        /* ── MANIFESTO ── */
         .manifesto {
             background: var(--burgundy-card);
             border-radius: 12px;
             padding: 40px;
             border: 1px solid rgba(229, 193, 88, 0.1);
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
 
@@ -205,7 +314,45 @@
             font-size: 1.75rem;
         }
 
-        /* The 6 Core Pillars Grid */
+        .manifesto blockquote {
+            font-style: italic;
+            border-left: 3px solid var(--gold-glow);
+            padding-left: 15px;
+            margin: 0 0 20px 0;
+            color: var(--starlight);
+        }
+
+        /* ── SCIENCE FACTS ── */
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .science-fact {
+            background: rgba(229,193,88,0.06);
+            border: 1px solid rgba(229,193,88,0.15);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .science-fact-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold-glow);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .science-fact-label {
+            font-size: 0.85rem;
+            color: var(--muted-rose);
+            line-height: 1.4;
+        }
+
+        /* ── PILLARS ── */
         .pillars-title {
             text-align: center;
             font-size: 2.25rem;
@@ -216,7 +363,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .card {
@@ -230,12 +377,20 @@
 
         .card:hover {
             border-color: rgba(229, 193, 88, 0.4);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 12px;
         }
 
         .card h3 {
             font-size: 1.35rem;
             margin-top: 0;
+            margin-bottom: 8px;
             color: var(--gold-glow);
             display: flex;
             justify-content: space-between;
@@ -248,7 +403,91 @@
             margin-bottom: 0;
         }
 
-        /* Footer */
+        /* ── WHO IT IS FOR ── */
+        .audience-section {
+            background: var(--burgundy-card);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid rgba(229,193,88,0.1);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .audience-section h2 {
+            color: var(--gold-glow);
+            margin-top: 0;
+            font-size: 1.75rem;
+            margin-bottom: 30px;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .audience-item {
+            padding: 16px;
+            border: 1px solid rgba(229,193,88,0.15);
+            border-radius: 8px;
+            background: rgba(229,193,88,0.04);
+        }
+
+        .audience-item-icon { font-size: 1.6rem; display: block; margin-bottom: 8px; }
+        .audience-item-title { font-size: 1rem; font-weight: 600; color: var(--starlight); margin-bottom: 4px; }
+        .audience-item-sub { font-size: 0.85rem; color: var(--muted-rose); }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            background: rgba(229,193,88,0.04);
+            border: 1px solid rgba(229,193,88,0.15);
+            border-radius: 8px;
+            padding: 24px 30px;
+            margin-bottom: 60px;
+            font-size: 0.9rem;
+            color: var(--muted-rose);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .disclaimer strong { color: var(--starlight); }
+
+        /* ── PRIVACY POLICY ── */
+        .privacy-section {
+            background: var(--burgundy-card);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid rgba(229,193,88,0.08);
+            margin-bottom: 60px;
+        }
+
+        .privacy-section h2 {
+            color: var(--gold-glow);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .privacy-section h3 {
+            color: var(--starlight);
+            font-size: 1rem;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        .privacy-section p {
+            color: var(--muted-rose);
+            font-size: 0.9rem;
+            margin: 0 0 10px 0;
+        }
+
+        .privacy-updated {
+            font-size: 0.8rem;
+            color: var(--muted-rose);
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+
+        /* ── FOOTER ── */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -256,95 +495,255 @@
             font-size: 0.85rem;
             border-top: 1px solid rgba(229, 193, 88, 0.15);
         }
+
+        footer a {
+            color: var(--gold-glow);
+            text-decoration: none;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-sub { font-size: 1.1rem; }
+            .manifesto { padding: 25px; }
+            .signup-section { padding: 25px 20px; }
+            header { flex-direction: column; gap: 10px; text-align: center; }
+            .header-tagline { text-align: center; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
     <div class="stars-layer-1"></div>
     <div class="stars-layer-2"></div>
+    <div class="stars-layer-3"></div>
 
     <div class="container">
-        
+
+        <!-- ── HEADER ── -->
         <header>
-            <div class="logo">my<span>Jyotisha</span></div>
-            <div style="color: var(--muted-rose); font-size: 0.9rem; letter-spacing: 0.5px;">Vedic Matrix Calculator</div>
+            <div class="logo">
+                my<span>Jyotish</span>
+                <span class="logo-devanagari">मेरा ज्योतिष</span>
+            </div>
+            <div class="header-tagline">
+                Your Bhavishya — Future Mapped with the Stars<br>
+                <span style="font-size:0.8rem; opacity:0.7;">Vedic Jyotisha · 5,000 Years of Sacred Science</span>
+            </div>
         </header>
 
+        <!-- ── HERO ── -->
         <section class="hero">
+            <span class="om-symbol">ॐ</span>
+
             <div class="badge-container">
-                <div class="badge">NASA JPL Ephemeris Math</div>
-                <div class="badge">Sidereal True Alignments</div>
-                <div class="badge">Pure Archived Audio</div>
+                <div class="badge">Swiss Ephemeris · Arc-Second Precision</div>
+                <div class="badge">Sidereal · Lahiri Ayanamsa</div>
+                <div class="badge">5,000 Years of Vedic Science</div>
+                <div class="badge">Hindu &amp; Buddhist Diaspora</div>
             </div>
+
             <h1>Ancient Vedic Science.<br>Absolute Mathematical Precision.</h1>
+            <div class="hero-sub">Your Bhavishya — Future Mapped with the Stars ✦</div>
             <p>
-                Before the computer, before the telescope, the ancient rishis of the Vedic era mapped the cosmic order through advanced geometry, tracking calculations, and astronomical constants. We stripped away modern, commercial fluff to build a self-sufficient cosmic calculation engine.
+                Before the computer, before the telescope, the ancient Rishis of the Vedic era mapped the cosmic order through advanced geometry, precise astronomical constants and mathematical systems that took Western science centuries to equal. MyJyotish honours that precision — your birth chart calculated to the arc-second, your future illuminated by the oldest astronomical tradition on Earth.
             </p>
+
             <div class="cta-buttons">
-                <a href="#" class="btn">Coming Soon to iOS</a>
-                <a href="#" class="btn btn-secondary">Coming Soon to Android</a>
+                <a href="https://forms.gle/Eb6owTi35T88Ryt57" class="btn">🔔 Join the Launch List</a>
+                <a href="https://forms.gle/Eb6owTi35T88Ryt57" class="btn btn-secondary">Get Early Access</a>
+            </div>
+            <div class="cta-note">Coming soon to iOS App Store &amp; Google Play</div>
+        </section>
+
+        <!-- ── EMAIL SIGNUP ── -->
+        <section class="signup-section">
+            <h3>🌟 Be the First to Know When MyJyotish Launches</h3>
+            <p>Join hundreds of early members from the Hindu and Buddhist diaspora worldwide who are waiting for MyJyotish.</p>
+            <a href="https://forms.gle/Eb6owTi35T88Ryt57" class="btn" style="display:inline-block; margin-bottom:20px;">🔔 Join the Launch List</a>
+            <div style="color: var(--muted-rose); font-size:0.9rem; margin-top:4px;">
+                Or email us at <span style="color: var(--gold-glow); font-weight:600;">hello@myjyotish.app</span> with subject <strong style="color:var(--starlight);">Notify Me</strong>
             </div>
         </section>
 
+        <!-- ── MANIFESTO ── -->
         <section class="manifesto">
-            <h2>The Mathematics of Reality: Vedic vs. Modern Zodiacs</h2>
-            <p style="font-style: italic; border-left: 3px solid var(--gold-glow); padding-left: 15px; margin-bottom: 20px; color: var(--starlight);">
-                All guidance in My Jyotisha is rooted in ancient Vedic manuscripts — the Vedanga Jyotisha, the Brihat Parashara Hora Shastra, the Panchanga tradition and other classical texts of Jyotisha, over 5,000 years old.
-            </p>
+            <h2>✦ The Mathematics of the Stars — Vedic vs. Modern Zodiacs</h2>
+            <blockquote>
+                All guidance in MyJyotish is rooted in ancient Vedic manuscripts — the Vedanga Jyotisha, the Brihat Parashara Hora Shastra, the Panchanga tradition and other classical texts of Jyotisha, over 5,000 years old.
+            </blockquote>
             <p>
-                Modern Western astrology relies entirely on the <strong>Tropical Zodiac</strong>—a fixed seasonal snapshot frozen in time from nearly 2,000 years ago. It operates under the assumption that the sky is stationary, completely ignoring the physical movement of space. 
+                Modern Western astrology relies entirely on the <strong>Tropical Zodiac</strong> — a fixed seasonal snapshot frozen in time from nearly 2,000 years ago. It ignores the physical movement of the Earth's axis through space, meaning Western signs have drifted nearly 24 degrees out of alignment with the actual stellar sky.
             </p>
             <p style="margin-top: 15px;">
-                <strong>Vedic Astronomy</strong> operates on the scientifically verified <strong>Sidereal Zodiac</strong>. It introduces an advanced calculation correction matrix known as the <em>Ayanamsha</em>. This continuous equation shifts calculations dynamically to trace the exact, real-world precession of the Earth's axis. While modern Western signs have drifted nearly 24 degrees out of alignment with the actual stellar sky, the mathematical formulas of the Vedas track exact planetary distributions down to fractions of an arcsecond.
+                <strong>Vedic Jyotisha</strong> operates on the scientifically verified <strong>Sidereal Zodiac</strong> — anchored to the actual, fixed positions of the star constellations as they exist in the sky today. It applies the <em>Ayanamsa</em> correction (currently approximately 23°51' — Lahiri standard) to dynamically track the true precession of the Earth's axis. The Rishis did not guess at the stars. They calculated them — with a precision that took Western astronomy centuries to match.
             </p>
+            <p style="margin-top: 15px;">
+                MyJyotish uses the <strong>Swiss Ephemeris</strong> — the same astronomical calculation engine used by professional observatories and NASA-affiliated researchers worldwide — to produce planetary positions accurate to fractions of an arc-second. Your chart is not an approximation. It is mathematically precise.
+            </p>
+
+            <div class="science-grid">
+                <div class="science-fact">
+                    <span class="science-fact-number">5,000+</span>
+                    <span class="science-fact-label">Years of unbroken Vedic astronomical tradition</span>
+                </div>
+                <div class="science-fact">
+                    <span class="science-fact-number">1200 BCE</span>
+                    <span class="science-fact-label">Written Vedanga Jyotisha texts — centuries before Greek astronomy</span>
+                </div>
+                <div class="science-fact">
+                    <span class="science-fact-number">23°51'</span>
+                    <span class="science-fact-label">Lahiri Ayanamsa — the precise Sidereal correction applied to every chart</span>
+                </div>
+                <div class="science-fact">
+                    <span class="science-fact-number">27</span>
+                    <span class="science-fact-label">Nakshatras — lunar mansions mapped by the Rishis to arc-second precision</span>
+                </div>
+            </div>
         </section>
 
-        <h2 class="pillars-title">The 6 Pillars of the Ecosystem</h2>
-        
+        <!-- ── 6 PILLARS ── -->
+        <h2 class="pillars-title">The 6 Pillars of MyJyotish</h2>
+
         <section class="grid">
-            
+
             <div class="card">
+                <span class="card-icon">☸</span>
                 <h3>Janam Patri <span>०१</span></h3>
-                <p>Your structural baseline birth chart calculated via the Swiss Ephemeris engine. Renders flawless, dynamic mathematical distributions across regional North Indian Diamond or South Indian Square layout profiles.</p>
+                <p>Your structural baseline birth chart calculated via the Swiss Ephemeris engine with Lahiri Ayanamsa correction. North Indian Diamond, South Indian Square and Navamsa D9 marriage chart — all rendered with full planetary positions, degrees and Mahadasha timeline.</p>
             </div>
 
             <div class="card">
-                <h3>Kundli Milap <span>०२</span></h3>
-                <p>An automated 36-Guna compatibility analyzer running an uncompromising Ashta-Koota rule validation script to map relational coordinates without external, biased interpretations.</p>
+                <span class="card-icon">☽</span>
+                <h3>Kundli Milan <span>०२</span></h3>
+                <p>An automated 36-Guna compatibility analyser running Ashta-Koota rule validation, Navamsa D9 soul-level comparison and Mangal Dosha cross-check. Works across any two profiles worldwide — including cross-country diaspora couples.</p>
             </div>
 
             <div class="card">
+                <span class="card-icon">🌙</span>
                 <h3>Nakshatra Guidance <span>०३</span></h3>
-                <p>Weekly real-time monitoring of fast-moving planetary transits relative to your natal birth star, delivering logical, calculated warnings and behavioral pacing indicators.</p>
+                <p>Weekly real-time monitoring of planetary transits relative to your birth Nakshatra. Graha Shanti planetary remedies — gemstones, mantras, fasting guidance and Rahu Kaal daily alerts localised to your exact city and timezone.</p>
             </div>
 
             <div class="card">
+                <span class="card-icon">📅</span>
                 <h3>Shubh Muhurta <span>०४</span></h3>
-                <p>A color-coded, electional data calendar that screens the upcoming 90 days across the 5 essential metrics of the Panchang to pinpoint precise, localized hours of high structural alignment.</p>
+                <p>A full Panchang scoring calendar that screens upcoming dates across all 5 essential Panchang metrics — Nakshatra, Tithi, Yoga, Karana and Vara — to pinpoint precise auspicious windows for 9 life occasions.</p>
             </div>
 
             <div class="card">
+                <span class="card-icon">💎</span>
                 <h3>Graha Shanti <span>०५</span></h3>
-                <p>An energetic balance module evaluating active Vimshottari Dasha cycles. Recommends verified color therapy parameters, precise gemstone physics, and unadulterated karmic adjustments.</p>
+                <p>A complete planetary remedy module evaluating your Vimshottari Dasha cycle. Recommends gemstone physics, mantra timing, fasting day guidance and karmic adjustments rooted in the classical texts of Jyotisha.</p>
             </div>
 
             <div class="card">
-                <h3>Vivah Samadan <span>०६</span></h3>
-                <p>A secure, deeply private framework offering clear emotional navigation and timeline calculations for critical milestones, from separation anxiety to renewal and acceptance.</p>
+                <span class="card-icon">💙</span>
+                <h3>Relationship Healing <span>०६</span></h3>
+                <p>A compassionate, deeply private three-phase journey — from relationship distress through separation to renewal and new beginnings. Vedic remedies, Nakshatra guidance and planetary insights for each phase of the journey. Offered with reverence and without judgment.</p>
             </div>
 
         </section>
 
-        <section class="manifesto" style="text-align: center; border-color: rgba(229,193,88,0.25);">
-            <h3 style="color: var(--gold-glow); margin-top: 0;">Mantras for Peace and Tranquility</h3>
-            <p style="max-width: 800px; margin: 0 auto; color: var(--muted-rose); font-size: 1.1rem; letter-spacing: 0.2px;">
-                These are pristine, historical recordings of traditional Veda Pathshalas preserved for generational integrity, free from modern adjustment.
+        <!-- ── MANTRAS ── -->
+        <section class="manifesto" style="text-align: center; border-color: rgba(229,193,88,0.25); margin-bottom: 60px;">
+            <h3 style="color: var(--gold-glow); margin-top: 0; font-size: 1.4rem;">🪔 Mantras for Peace and Tranquility</h3>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--muted-rose); font-size: 1.05rem; letter-spacing: 0.2px;">
+                MyJyotish includes the Gayatri Mantra, Maha Mrityunjaya Mantra, Lakshmi Mantra and Graha-specific mantras — pristine recordings from traditional Veda Pathshalas preserved for generational integrity, offered as part of the Graha Shanti remedy guidance.
+            </p>
+            <p style="margin-top: 15px; color: var(--gold-glow); font-style: italic; font-size: 1rem;">
+                "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यम्"<br>
+                <span style="font-size: 0.85rem; color: var(--muted-rose);">Gayatri Mantra — the supreme Vedic mantra for clarity and divine light</span>
             </p>
         </section>
 
+        <!-- ── WHO IT IS FOR ── -->
+        <section class="audience-section">
+            <h2>✦ Who MyJyotish is For</h2>
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <span class="audience-item-icon">🪔</span>
+                    <div class="audience-item-title">Hindus &amp; Buddhists Worldwide</div>
+                    <div class="audience-item-sub">Keeping the sacred tradition alive from India to Fiji, UK to Canada</div>
+                </div>
+                <div class="audience-item">
+                    <span class="audience-item-icon">☸</span>
+                    <div class="audience-item-title">Seekers of All Faiths</div>
+                    <div class="audience-item-sub">Anyone drawn to Vedic wisdom and the mathematics of the stars</div>
+                </div>
+                <div class="audience-item">
+                    <span class="audience-item-icon">💍</span>
+                    <div class="audience-item-title">Families Planning</div>
+                    <div class="audience-item-sub">Marriages, new homes, naming ceremonies, business ventures</div>
+                </div>
+                <div class="audience-item">
+                    <span class="audience-item-icon">🌍</span>
+                    <div class="audience-item-title">The Indian Diaspora</div>
+                    <div class="audience-item-sub">USA · UK · Canada · Australia · Fiji · Mauritius · South Africa · UAE and beyond</div>
+                </div>
+                <div class="audience-item">
+                    <span class="audience-item-icon">💙</span>
+                    <div class="audience-item-title">Those Navigating Relationships</div>
+                    <div class="audience-item-sub">Finding Vedic guidance, remedies and a compassionate path forward</div>
+                </div>
+                <div class="audience-item">
+                    <span class="audience-item-icon">🧠</span>
+                    <div class="audience-item-title">The Scientifically Minded</div>
+                    <div class="audience-item-sub">Engineers, doctors and academics who want the mathematics, not just the mysticism</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DISCLAIMER ── -->
+        <div class="disclaimer">
+            <strong>All guidance in MyJyotish is rooted in ancient Vedic manuscripts</strong> — the Vedanga Jyotisha, the Brihat Parashara Hora Shastra, the Panchanga tradition and other classical texts of Jyotisha, over 5,000 years old. This app does not replace professional medical or legal advice. Astrological guidance is offered as spiritual and cultural wisdom, not as a substitute for professional consultation.
+        </div>
+
+        <!-- ── PRIVACY POLICY ── -->
+        <section class="privacy-section" id="privacy">
+            <h2>Privacy Policy</h2>
+            <p class="privacy-updated">Last updated: May 2026</p>
+
+            <p>MyJyotish is operated by [Your LLC Name], a Delaware Limited Liability Company. We are committed to protecting the privacy of your personal and sacred birth data.</p>
+
+            <h3>Information We Collect</h3>
+            <p>We collect the name, date of birth, time of birth and place of birth that you enter to generate your Janam Patri. We collect your country of residence for billing and pricing purposes. We collect your email address for account creation and notifications.</p>
+
+            <h3>How We Use Your Information</h3>
+            <p>Your birth data is used solely to calculate your Vedic astrological chart within the app. It is stored securely in Google Firebase and is never sold, shared or transmitted to third parties except as required to provide the service. We treat your birth information with the reverence it deserves.</p>
+
+            <h3>Payment Information</h3>
+            <p>Payments are processed by Stripe (international customers) and Razorpay (Indian customers). We do not store your payment card details. All payment processing is handled securely by these providers.</p>
+
+            <h3>Push Notifications</h3>
+            <p>We send push notifications for weekly Nakshatra predictions, daily Rahu Kaal alerts and auspicious day reminders. You can disable notifications in your device settings at any time.</p>
+
+            <h3>Data Retention</h3>
+            <p>You may delete your account and all associated data at any time by contacting us at <span style="color: var(--gold-glow);">hello@myjyotish.app</span></p>
+
+            <h3>Contact</h3>
+            <p>For any privacy questions please contact <span style="color: var(--gold-glow);">hello@myjyotish.app</span></p>
+        </section>
+
+        <!-- ── FOOTER ── -->
         <footer>
-            <p>© 2026 myJyotisha. All rights reserved. Built on pure Vedic calculation logic.</p>
-            <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">Primary Engine Access via myJyotisha.app | Secure Routing Alternative via myjyotish.app</p>
+            <p style="font-size: 1.1rem; color: var(--gold-glow); margin-bottom: 8px;">मेरा ज्योतिष · MyJyotish</p>
+            <p style="font-style: italic; margin-bottom: 16px; color: var(--muted-rose);">Your Bhavishya — Future Mapped with the Stars</p>
+            <p>© 2026 MyJyotish. All rights reserved. Built on pure Vedic calculation logic.</p>
+            <p style="margin-top: 10px;">
+                <span style="color: var(--gold-glow);">hello@myjyotish.app</span>
+                &nbsp;·&nbsp;
+                <a href="https://instagram.com/myjyotishapp" style="color: var(--gold-glow);">@myjyotishapp</a>
+                &nbsp;·&nbsp;
+                <a href="#privacy" style="color: var(--gold-glow);">Privacy Policy</a>
+            </p>
+            <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.5;">
+                myjyotish.app · myjyotisha.app
+            </p>
         </footer>
 
     </div>
