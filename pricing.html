@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — myJyotish</title>
+    <meta name="description" content="myJyotish pricing — Janam Patri, Kundli Milan, Nakshatra Weekly, Graha Shanti and Jyotishi Pro plans, localised to your country.">
+    <style>
+    :root {
+        --burgundy-deep: #2A0813;
+        --burgundy-card: #3D101E;
+        --gold-glow: #e5c158;
+        --starlight: #f9f9fb;
+        --muted-rose: #c5a4af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--burgundy-deep);
+        color: var(--starlight);
+        line-height: 1.6;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(229, 193, 88, 0.15);
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--starlight);
+        text-decoration: none;
+    }
+
+    .logo span { color: var(--gold-glow); }
+
+    .logo-devanagari {
+        font-size: 0.85rem;
+        color: var(--gold-glow);
+        opacity: 0.7;
+        display: block;
+        letter-spacing: 2px;
+        margin-top: 2px;
+    }
+
+    nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        color: var(--muted-rose);
+        text-decoration: none;
+    }
+
+    nav a:hover, nav a.active { color: var(--gold-glow); }
+
+    .page-title {
+        font-size: 2rem;
+        color: var(--gold-glow);
+        margin: 50px 0 6px 0;
+        text-align: center;
+    }
+
+    .page-updated {
+        font-size: 0.8rem;
+        color: var(--muted-rose);
+        opacity: 0.7;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .policy-section {
+        background: var(--burgundy-card);
+        border-radius: 12px;
+        padding: 40px;
+        border: 1px solid rgba(229,193,88,0.08);
+        margin-bottom: 40px;
+    }
+
+    .policy-section h2 {
+        color: var(--gold-glow);
+        margin-top: 0;
+        font-size: 1.3rem;
+        border-bottom: 1px solid rgba(229,193,88,0.15);
+        padding-bottom: 10px;
+    }
+
+    .policy-section h2:not(:first-child) {
+        margin-top: 36px;
+    }
+
+    .policy-section h3 {
+        color: var(--starlight);
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+
+    .policy-section p {
+        color: var(--muted-rose);
+        font-size: 0.92rem;
+        margin: 0 0 12px 0;
+    }
+
+    .policy-section ul, .policy-section ol {
+        color: var(--muted-rose);
+        font-size: 0.92rem;
+        margin: 0 0 14px 0;
+        padding-left: 22px;
+    }
+
+    .policy-section li { margin-bottom: 6px; }
+
+    .policy-section strong { color: var(--starlight); }
+
+    .policy-section a { color: var(--gold-glow); }
+
+    .contact-box {
+        background: rgba(229,193,88,0.06);
+        border: 1px solid rgba(229,193,88,0.2);
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-top: 16px;
+    }
+
+    .contact-box p { color: var(--starlight); margin: 4px 0; }
+    .contact-box .label { color: var(--gold-glow); font-weight: 600; font-size: 0.85rem; }
+
+    table.pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 14px 0 22px 0;
+        font-size: 0.85rem;
+    }
+
+    table.pricing-table th {
+        text-align: left;
+        color: var(--gold-glow);
+        padding: 8px 10px;
+        border-bottom: 1px solid rgba(229,193,88,0.25);
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    table.pricing-table td {
+        padding: 8px 10px;
+        color: var(--starlight);
+        border-bottom: 1px solid rgba(229,193,88,0.08);
+    }
+
+    table.pricing-table tr:nth-child(even) td {
+        background: rgba(229,193,88,0.03);
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px 0;
+        color: var(--muted-rose);
+        font-size: 0.85rem;
+        border-top: 1px solid rgba(229, 193, 88, 0.15);
+    }
+
+    footer a {
+        color: var(--gold-glow);
+        text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+        .policy-section { padding: 24px 20px; }
+        header { flex-direction: column; text-align: center; }
+        nav { justify-content: center; }
+        .page-title { font-size: 1.5rem; }
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="/" class="logo">
+                my<span>Jyotish</span>
+                <span class="logo-devanagari">मेरा ज्योतिष</span>
+            </a>
+            <nav>
+                <a href="/privacy-policy.html">Privacy</a>
+                <a href="/terms-and-conditions.html">Terms</a>
+                <a href="/pricing.html" class="active">Pricing</a>
+                <a href="/cancellation-and-refunds.html">Refunds</a>
+                <a href="/shipping-policy.html">Shipping</a>
+                <a href="/contact-us.html">Contact</a>
+            </nav>
+        </header>
+
+        <h1 class="page-title">Pricing</h1>
+        <p class="page-updated">Prices shown are localised by country and displayed in-app at checkout. Last updated: June 21, 2026</p>
+
+        <div class="policy-section">
+
+            <h2>Our Plans</h2>
+            <p><strong>Free</strong> — Begin your Jyotisha journey. Includes 1 Janam Patri, a basic North or South Indian chart, birth Nakshatra name, Mangal Dosha status, and Gayatri and Maha Mrityunjaya mantras.</p>
+
+            <p><strong>Janam Patri</strong> (one-time purchase) — Your complete birth chart. Includes 4 Janam Patris, full chart in North, South and Navamsa D9 styles, all 9 planets with dignities, all 12 house interpretations, Vimshottari Mahadasha timeline, and classical planet-in-house meanings.</p>
+
+            <p><strong>Kundli Milan</strong> (one-time purchase) — Complete compatibility analysis. Includes unlimited Kundli Milan comparisons, full 36-point Ashtakoota score, all 8 Koota breakdowns, Mangal Dosha cross-check, Navamsa D9 soul compatibility, and full compatibility remedies.</p>
+
+            <p><strong>Nakshatra Weekly</strong> (monthly subscription) — Weekly guidance for the whole family. Covers all profiles on your account, with weekly predictions, full Nakshatra interpretation, Graha Shanti remedies, visa/H1B planetary guidance, Vivah relationship healing, and Muhurta auspicious dates for all 9 occasions.</p>
+
+            <p><strong>Graha Shanti</strong> (monthly subscription) — AI readings for every family member. Includes everything in Nakshatra Weekly, plus AI Reading for every profile, monthly planetary transit guidance, a personalised remedy calendar, and Rahu Kaal / auspicious day alerts.</p>
+
+            <p><strong>Jyotishi Pro</strong> (monthly subscription) — Unlimited profiles for the whole family. Includes everything in Graha Shanti, plus unlimited Janam Patris and Kundli Milan reports, full Muhurta with detailed Panchang, annual forecasts for every profile, priority support, and early access to new features.</p>
+
+            <h2>Pricing by Country</h2>
+            <p>Prices are shown in local currency and automatically detected based on your country of residence as set in your profile. You can change your billing country at any time from the Plans tab in the app.</p>
+
+            <table class="pricing-table">
+                <tr>
+                    <th>Country</th>
+                    <th>Janam Patri</th>
+                    <th>Kundli Milan</th>
+                    <th>Nakshatra Weekly /mo</th>
+                    <th>Graha Shanti /mo</th>
+                    <th>Jyotishi Pro /mo</th>
+                </tr>
+                <tr><td>United States</td><td>$9.99</td><td>$12.99</td><td>$7.49</td><td>$14.99</td><td>$26.99</td></tr>
+                <tr><td>United Kingdom</td><td>£7.99</td><td>£9.99</td><td>£5.99</td><td>£11.99</td><td>£21.99</td></tr>
+                <tr><td>Canada</td><td>CA$12.99</td><td>CA$16.99</td><td>CA$9.99</td><td>CA$19.99</td><td>CA$34.99</td></tr>
+                <tr><td>Australia</td><td>A$14.99</td><td>A$19.99</td><td>A$10.99</td><td>A$21.99</td><td>A$39.99</td></tr>
+                <tr><td>New Zealand</td><td>NZ$15.99</td><td>NZ$20.99</td><td>NZ$11.99</td><td>NZ$22.99</td><td>NZ$41.99</td></tr>
+                <tr><td>Germany / Europe</td><td>€8.99</td><td>€11.99</td><td>€6.99</td><td>€13.99</td><td>€24.99</td></tr>
+                <tr><td>Singapore</td><td>S$12.99</td><td>S$16.99</td><td>S$9.99</td><td>S$19.99</td><td>S$34.99</td></tr>
+                <tr><td>UAE</td><td>AED 36.99</td><td>AED 47.99</td><td>AED 27.49</td><td>AED 54.99</td><td>AED 99.99</td></tr>
+                <tr><td>Fiji</td><td>FJ$19.99</td><td>FJ$25.99</td><td>FJ$14.99</td><td>FJ$29.99</td><td>FJ$54.99</td></tr>
+                <tr><td>Trinidad and Tobago</td><td>TT$67.99</td><td>TT$87.99</td><td>TT$49.99</td><td>TT$99.99</td><td>TT$179.99</td></tr>
+                <tr><td>Mauritius</td><td>Rs 399</td><td>Rs 499</td><td>Rs 299</td><td>Rs 599</td><td>Rs 1099</td></tr>
+                <tr><td>India</td><td>₹199</td><td>₹249</td><td>₹149</td><td>₹299</td><td>₹549</td></tr>
+                <tr><td>South Africa</td><td>R99</td><td>R129</td><td>R74</td><td>R149</td><td>R274</td></tr>
+                <tr><td>Kenya</td><td>KSh 799</td><td>KSh 999</td><td>KSh 599</td><td>KSh 1199</td><td>KSh 2199</td></tr>
+            </table>
+
+            <h2>Payment Processors</h2>
+            <p>Payments are processed securely by our payment partners, selected based on your country:</p>
+            <ul>
+                <li><strong>Stripe</strong> — United States, United Kingdom, Canada, Australia, New Zealand, Germany/Europe, Singapore, UAE, Fiji, Trinidad and Tobago, Mauritius</li>
+                <li><strong>Razorpay</strong> — India</li>
+                <li><strong>Paystack</strong> — South Africa, Kenya</li>
+            </ul>
+            <p>We do not store your full payment card details on our own servers; all card data is handled directly by our payment processors in accordance with PCI-DSS standards.</p>
+
+            <h2>Questions About Pricing</h2>
+            <div class="contact-box">
+                <p class="label">EMAIL</p>
+                <p>hello@myjyotish.app</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p style="font-size: 1.1rem; color: var(--gold-glow); margin-bottom: 8px;">मेरा ज्योतिष · MyJyotish</p>
+            <p>© 2026 Jyotish Technologies LLC. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="/privacy-policy.html">Privacy</a> &nbsp;·&nbsp;
+                <a href="/terms-and-conditions.html">Terms</a> &nbsp;·&nbsp;
+                <a href="/pricing.html">Pricing</a> &nbsp;·&nbsp;
+                <a href="/contact-us.html">Contact</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
